@@ -23,6 +23,7 @@
 ## 図（Ridge: 実測 vs 予測）
 ![Actual vs Predicted](./scatter%20ridge%20actual%20vs%20pred.png)
 
+![Actual vs Predicted](./scatter_ridge_actual_vs_pred.png)
 
 ---
 ### 付録：数表
