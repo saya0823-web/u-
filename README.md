@@ -24,7 +24,7 @@
 
 ## 図（Ridge: 実測 vs 予測）
 ![Actual vs Predicted](./scatter_ridge_actual_vs_pred.png)
-図1. Ridge: 実測 vs 予測
+- 図1.Ridge:実測　vs　予測
 ---
 
 ### 保存率（save_rate）の予測
