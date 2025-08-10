@@ -44,3 +44,50 @@ Ridge回帰で「いいね」を予測（R²=0.909 / MAE=63.6）。主要因は 
 
 ## Contact
 お仕事/ご相談: ✉️ tianzhongzaoji80@gmail.com ｜ X: https://x.com/1046vsaki_saya
+
+# 1) 特徴量作成
+import numpy as np, pandas as pd
+df["save_rate"] = (df["saves"] / df["impressions"]).clip(0, 1)
+
+# 2) 学習：Ridge回帰（impressionsは目的の分母なので使わない）
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import RidgeCV
+from sklearn.metrics import mean_absolute_error, r2_score
+
+X = df[["hour","media_type","weekday","reach"]]  # 分母のimpressionsは除外
+y = df["save_rate"]
+
+Xtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.2, random_state=42)
+
+pre = ColumnTransformer([
+    ("cat", OneHotEncoder(drop='first', handle_unknown='ignore'), ["media_type","weekday"]),
+    ("num", StandardScaler(), ["hour","reach"])
+])
+
+model = Pipeline([("prep", pre), ("reg", RidgeCV(alphas=np.logspace(-3,3,20), cv=5))]).fit(Xtr, ytr)
+pred = model.predict(Xte)
+
+mae_base = mean_absolute_error(yte, np.full_like(yte, ytr.mean(), dtype=float))
+mae = mean_absolute_error(yte, pred); r2 = r2_score(yte, pred)
+model.named_steps["reg"].alpha_, mae_base, mae, r2
+
+# 3) 可視化：実測 vs 予測（保存率）
+import matplotlib.pyplot as plt
+plt.figure()
+plt.scatter(yte, pred, alpha=0.7)
+mn, mx = float(min(yte.min(), pred.min())), float(max(yte.max(), pred.max()))
+plt.plot([mn, mx], [mn, mx])
+plt.xlabel("Actual save_rate"); plt.ylabel("Predicted save_rate"); plt.title("Actual vs Predicted (save_rate)")
+plt.show()
+
+# 4) 重要度ざっくり：Permutation Importance（列単位）
+from sklearn.inspection import permutation_importance
+cols = ["hour","media_type","weekday","reach"]
+r = permutation_importance(model, Xte, yte, n_repeats=20, random_state=42)
+pd.Series(r.importances_mean, index=cols).sort_values(ascending=False)
+
+### 保存率の予測（結果）
+Ridgeで save_rate を回帰。ベースラインMAE→モデルMAEで○○%改善。重要因子は reach／weekday／media_type の順。→ 夜帯×保存を促す構成（チェックリスト/スワイプ解説/CTA）を強化。
