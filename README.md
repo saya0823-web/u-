@@ -133,4 +133,3 @@ Ridgeで save_rate を回帰。ベースラインMAE→モデルMAEで○○%改
 <p align="center">
   <img width="720" alt="係数" src="https://github.com/user-attachments/assets/14fa0433-be55-4573-ba33-c48fd8560ac1" />
 </p>
-
