@@ -119,3 +119,13 @@ Ridgeで save_rate を回帰。ベースラインMAE→モデルMAEで○○%改
 
 <img width="640" height="480" alt="interaction_hour_media_curves" src="https://github.com/user-attachments/assets/59748916-34a5-47c0-944b-f8fc7bc78f49" />
 <img width="640" height="480" alt="coeffs_interaction" src="https://github.com/user-attachments/assets/14fa0433-be55-4573-ba33-c48fd8560ac1" />
+
+
+### 時刻×媒体の交互作用（likes）
+- モデル：Ridge（交互作用 `hour×media_type`、共変量 `reach`）
+- 指標：**R²=0.906 / MAE=68.5**
+- 結果：予測曲線より **夜×carousel が最も強い傾向**。reel は一貫して中位、image は控えめ。
+- 施策：夜は **carouselを厚め** に、reelをサブでテスト。昼は image / reel のABテスト。reachは一定として、保存・コメント導線で“質”を上げる。
+
+![Coefficients](./coeffs_interaction.png)
+![Hour × Media curves](./interaction_hour_media_curves.png)
