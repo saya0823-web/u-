@@ -130,10 +130,6 @@ Ridgeで save_rate を回帰。ベースラインMAE→モデルMAEで○○%改
 <img width="640" alt="時間×メディアカーブ" src="https://github.com/user-attachments/assets/59748916-34a5-47c0-944b-f8fc7bc78f49" />
 <img width="640" alt="係数" src="https://github.com/user-attachments/assets/14fa0433-be55-4573-ba33-c48fd8560ac1" />
 
-<p align="center">
-  <img src="画像URL" width="720" alt="時間×メディアカーブ" />
-</p>
-
 ### 時刻×媒体の交互作用（likes）
 - モデル：Ridge（交互作用 `hour×media_type`、共変量 `reach`）
 - 指標：**R²=0.906 / MAE=68.5**
