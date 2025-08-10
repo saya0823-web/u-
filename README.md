@@ -105,3 +105,14 @@ Ridgeで save_rate を回帰。ベースラインMAE→モデルMAEで○○%改
 <!-- 画像を出力＆アップしていれば下を有効化 -->
 <!-- ![Actual vs Predicted (save_rate)](./scatter_save_rate.png) -->
 <!-- ![Permutation importance (save_rate)](./permimp_save_rate.png) -->
+
+## 保存率（save_rate）の予測
+
+- **モデル**：Ridge（重みなし）
+- **指標**：MAE(平均予測)=**0.0041** → モデル=**0.0041**（**改善 0%**）／ **R²=-0.015**
+- **解釈**：現行の特徴（hour / weekday / media_type / reach）だけでは保存率の説明力がほぼ出ず、データ生成のランダム性の影響が大きい。
+
+**次の打ち手**
+- impressionsで**重み付きRidge**に（試行回数を重視）
+- または **二項GLM（ロジット）**で `saves ~ impressions` を正しく扱う
+- **コンテンツ特徴**を追加（キャプション長、ハッシュタグ数、媒体ごとの固定効果 など）
