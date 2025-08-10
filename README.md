@@ -116,3 +116,6 @@ Ridgeで save_rate を回帰。ベースラインMAE→モデルMAEで○○%改
 - impressionsで**重み付きRidge**に（試行回数を重視）
 - または **二項GLM（ロジット）**で `saves ~ impressions` を正しく扱う
 - **コンテンツ特徴**を追加（キャプション長、ハッシュタグ数、媒体ごとの固定効果 など）
+
+<img width="640" height="480" alt="interaction_hour_media_curves" src="https://github.com/user-attachments/assets/59748916-34a5-47c0-944b-f8fc7bc78f49" />
+<img width="640" height="480" alt="coeffs_interaction" src="https://github.com/user-attachments/assets/14fa0433-be55-4573-ba33-c48fd8560ac1" />
