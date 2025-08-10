@@ -127,5 +127,6 @@ Ridgeで save_rate を回帰。ベースラインMAE→モデルMAEで○○%改
 - 結果：予測曲線より **夜×carousel が最も強い傾向**。reel は一貫して中位、image は控えめ。
 - 施策：夜は **carouselを厚め** に、reelをサブでテスト。昼は image / reel のABテスト。reachは一定として、保存・コメント導線で“質”を上げる。
 
-![Coefficients](./coeffs_interaction.png)
-![Hour × Media curves](./interaction_hour_media_curves.png)
+![係数](./coeffs_interaction.png)
+![時間×メディアカーブ](./interaction_hour_media_curves.png)
+
