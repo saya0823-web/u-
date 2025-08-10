@@ -39,3 +39,8 @@ Ridge回帰で likes 予測（R²=0.909 / MAE=63.6）。主要因は reach。夜
 ## Contact
 お仕事/ご相談: ✉️ <あなたの連絡先 or SNSリンク>
 
+## TL;DR
+Ridge回帰で「いいね」を予測（R²=0.909 / MAE=63.6）。主要因は reach。夜18時中心×保存/コメント設計で「到達の質」を上げると効果が見込める。
+
+## Contact
+お仕事/ご相談: ✉️ tianzhongzaoji80@gmail.com ｜ X: https://x.com/1046vsaki_saya
