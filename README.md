@@ -24,7 +24,7 @@
 
 ## 図（Ridge: 実測 vs 予測）
 ![Actual vs Predicted](./scatter_ridge_actual_vs_pred.png)
-
+図1. Ridge: 実測 vs 予測
 ---
 
 ### 保存率（save_rate）の予測
@@ -47,7 +47,7 @@
 <p align="center">
   <img width="720" alt="係数" src="https://github.com/user-attachments/assets/14fa0433-be55-4573-ba33-c48fd8560ac1" />
 </p>
-
+図2. 時刻×媒体の交互作用
 ---
 
 ### 付録：数表
