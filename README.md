@@ -91,3 +91,17 @@ pd.Series(r.importances_mean, index=cols).sort_values(ascending=False)
 
 ### 保存率の予測（結果）
 Ridgeで save_rate を回帰。ベースラインMAE→モデルMAEで○○%改善。重要因子は reach／weekday／media_type の順。→ 夜帯×保存を促す構成（チェックリスト/スワイプ解説/CTA）を強化。
+
+### 保存率（save_rate）の予測
+- モデル：Ridge（重みなし）
+- 指標：MAE(平均予測)=**0.0041** → モデル=**0.0041**（改善 **0%**）／ R²=**-0.015**
+- 解釈：現行の特徴（hour/weekday/media_type/reach）だけでは保存率の説明力がほぼ出ず、**データ生成のランダム性**の影響が大きい。
+
+**次の打ち手**
+- impressionsで**重み付きRidge**に（試行回数を重視）
+- もしくは **二項GLM（ロジット）**で `saves ~ impressions` を正しく扱う
+- コンテンツ特徴を追加（キャプション長・ハッシュタグ数・媒体ごとの固定効果）
+
+<!-- 画像を出力＆アップしていれば下を有効化 -->
+<!-- ![Actual vs Predicted (save_rate)](./scatter_save_rate.png) -->
+<!-- ![Permutation importance (save_rate)](./permimp_save_rate.png) -->
