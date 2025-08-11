@@ -1,6 +1,5 @@
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](
-  https://colab.research.google.com/github/saya0823-web/u-/blob/main/ds_zero_to_one_starter_v2.ipynb
-)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/saya0823-web/u-/blob/main/ds_zero_to_one_starter_v2.ipynb)
+
 
 **目次**｜[目的](#目的) / [手順](#手順超要約) / [主な結果](#主な結果) / [示唆](#示唆saya向け) / [図](#図ridge-実測-vs-予測) / [保存率](#保存率save_rateの予測) / [交互作用](#時刻媒体の交互作用likes) / [付録](#付録数表) / [TL;DR](#tldr) / [Contact](#contact)
 
@@ -69,20 +68,3 @@ Ridge回帰で likes 予測（R²=0.909 / MAE=63.6）。主要因は reach。**�
 ## Contact
 お仕事/ご相談: ✉️ tianzhongzaoji80@gmail.com ｜ X: https://x.com/1046vsaki_saya
 
-numpy
-pandas
-scikit-learn
-matplotlib
-statsmodels
-
-MIT License
-
-Copyright (c) 2025 Saya
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-[...省略せずにMIT全文を貼ってOK...]
