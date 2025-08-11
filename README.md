@@ -64,6 +64,10 @@
 
 > ※ サンプル生成データでの結果です（実データでは特徴追加で改善余地あり）。
 
+![Actual vs Predicted (save_rate, weighted)](./scatter_save_rate_weighted.png)
+![Permutation importance (save_rate, weighted)](./permimp_save_rate_weighted.png)
+
+
 ## TL;DR
 Ridge回帰で likes 予測（R²=0.909 / MAE=63.6）。主要因は reach。**夜18時中心×保存/コメント設計**を推奨。
 
