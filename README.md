@@ -32,11 +32,15 @@
 - 図1.Ridge:実測　vs　予測
 ---
 
-### 保存率（save_rate）の予測
-- **モデル**：Ridge（重みなし）
-- **指標**：MAE(平均予測)=**0.0041** → モデル=**0.0041**（**改善 0%**）／ **R²=-0.015**
-- **解釈**：現行の特徴（hour / weekday / media_type / reach）だけでは保存率の説明力がほぼ出ず、**データ生成のランダム性**の影響が大きい。
-- **次の打ち手**：impressionsで**重み付きRidge**／**二項GLM（ロジット）**で `saves ~ impressions` を正しく扱う／**コンテンツ特徴**（キャプション長・ハッシュタグ数・媒体ごとの固定効果）を追加。
+### 保存率（save_rate）の予測：重み付きRidge
+- **モデル**：Ridge（weights = impressions）
+- **指標**：MAE(平均予測)=**0.0041** → モデル=**0.0047**（**改善率 -13.7%**）／ **R²=-0.359**
+- **解釈**：印象回数で重み付けしても今回は**精度は改善せず**。小標本＋保存率のばらつきや重みの偏りの影響が大きい可能性。  
+  次は **二項GLM（ロジット）** や **コンテンツ特徴の追加** で再検証を提案。
+
+![Actual vs Predicted (save_rate, weighted)](./scatter_save_rate_weighted.png)  
+![Permutation importance (save_rate, weighted)](./permimp_save_rate_weighted.png)
+
 
 ---
 
