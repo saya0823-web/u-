@@ -78,3 +78,12 @@ Ridge回帰で likes 予測（R²=0.909 / MAE=63.6）。主要因は reach。**�
 ## Contact
 お仕事/ご相談: ✉️ tianzhongzaoji80@gmail.com ｜ X: https://x.com/1046vsaki_saya
 
+### 保存率（save_rate）の予測：二項GLM（ロジット）
+
+- **モデル**: GLM Binomial（endog=保存率, `var_weights = impressions`）
+- **指標**: MAE = **0.0060** ／ **Pseudo R² ≈ 0.169**
+- **要点**: 保存を【成功/試行】として扱う正攻法。小標本＆ノイズ多めでも一定の説明力。
+  係数上位（図の右側）が保存率を押し上げる要因（例: reach, ○○曜日, media_type=○○ など）。
+
+![Coefficients (GLM)](./coef_save_rate_glm.png)  
+![Actual vs Predicted (GLM)](./scatter_save_rate_glm.png)
