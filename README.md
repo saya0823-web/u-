@@ -86,6 +86,5 @@ Ridge回帰で likes 予測（R²=0.909 / MAE=63.6）。主要因は reach。**�
   係数上位（図の右側）が保存率を押し上げる要因（例: reach, ○○曜日, media_type=○○ など）。
 
 ![係数（GLM）](./mfx_save_rate_glm.png)
-![実際と予測（GLM）](./scatter_save_rate_glm.png)
 
 ![Actual vs Predicted (GLM, save_rate)](./scatter_save_rate_glm.png)
