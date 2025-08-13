@@ -90,3 +90,17 @@ Ridge回帰で likes 予測（R²=0.909 / MAE=63.6）。主要因は reach。**�
 ![Actual vs Predicted (GLM, save_rate)](./scatter_save_rate_glm.png)
 
 - 保存率用のテンプレCSV: [`data/mfx_save_rate_glm.csv`](data/mfx_save_rate_glm.csv)
+
+## 保存率（save_rate）の予測：GLM（ロジット）
+
+- **モデル**：GLM Binomial（endog = 保存率、`var_weights=impressions`）
+- **指標**：MAE ≈ **0.0060** ／ 擬似R² ≈ **0.169**
+- **要点**：
+  - 小標本＋ノイズ多めの中でも一定の説明力。**重み付き**（impressions）で “試行回数” を考慮。
+  - **メディア種別**や**曜日**に効果の差。質的施策（保存誘発のCTA/構成）が効く余地あり。
+
+**実測 vs 予測（保存率）**
+![Actual vs Predicted (GLM, save_rate)](./figs/scatter_save_rate_glm.png)
+
+**係数（CSV）**
+- [coef_save_rate_glm.csv](./data/coef_save_rate_glm.csv)
