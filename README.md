@@ -117,3 +117,8 @@ Ridge回帰で likes 予測（R²=0.909 / MAE=63.6）。主要因は reach。**�
 <img src="./mfx_save_rate_glm.png" width="640">
 （表）[mfx_save_rate_glm.csv](./mfx_save_rate_glm.csv)
 
+・image / reel は（carousel基準で）保存率が低下傾向  
+・水曜・日曜は低め、Mon/Tue はやや高め  
+・hour は遅くなるほど微減、reach の寄与は極小
+
+
