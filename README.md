@@ -123,4 +123,4 @@ Ridge回帰で likes 予測（R²=0.909 / MAE=63.6）。主要因は reach。**�
 
 GLM (logit), var_weights=impressions, MAE≈0.0060, 擬似R²≈0.169
 
-![保存率改善アクションマップ](images/save_rate_improvement_map_illustration.png)
+![保存率改善アクションマップ]](https://github.com/saya0823-web/u-/blob/main/save_rate_improvement_map_illustration.png))
