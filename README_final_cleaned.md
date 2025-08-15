@@ -152,4 +152,10 @@ GLM（ロジット）、var_weights=impressions、MAE≈0.0060、擬似R^2≈0.1
 
 ![保存率改善アクションマップ](save_rate_improvement_map_illustration_small.png)
 
+<p align="center">
+  <a href="save_rate_improvement_map_illustration.png">
+    <img src="save_rate_improvement_map_illustration.png" width="500" alt="保存率改善アクションマップ（クリックで拡大）">
+  </a>
+</p>
+
 このアクションマップは、投稿の保存率を向上させるための改善施策を視覚化したものです。
