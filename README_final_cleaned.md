@@ -106,8 +106,8 @@
 
 # 保存率改善レポート（アクション）
 <p align="center">
-  <a href="./images/save_rate_improvement_map_illustration.png">
-    <img src="./images/save_rate_improvement_map_illustration_small.png" width="380" alt="保存率改善アクションマップ（クリックで拡大）">
+  <a href="save_rate_improvement_map_illustration.png">
+    <img src="save_rate_improvement_map_illustration_small.png" width="380" alt="保存率改善アクションマップ（クリックで拡大）">
   </a>
 </p>
 
