@@ -84,10 +84,10 @@
 
 **実測 vs 予測（保存率）**  
 <p align="center">
-  <img src="./figs/scatter_save_rate_glm.png" width="380" alt="GLM: 実測 vs 予測（保存率）">
+  <img src="scatter_save_rate_glm.png" width="380" alt="GLM: 実測 vs 予測（保存率）">
 </p>
 
-**係数（CSV）**  
+**係数（CSV）** 
 - [coef_save_rate_glm.csv](./data/coef_save_rate_glm.csv)
 
 **GLM 詳細（例）**
@@ -98,7 +98,7 @@
   reach は保存率の直接押上げは小 → **保存導線の設計** を重視
 
 <p align="center">
-  <img src="./mfx_save_rate_glm.png" width="420" alt="GLM 係数（mfx）">
+  <img src="mfx_save_rate_glm.png" width="420" alt="GLM 係数（mfx）">
 </p>
 <p align="center"><sub>（表）<a href="./mfx_save_rate_glm.csv">mfx_save_rate_glm.csv</a></sub></p>
 
