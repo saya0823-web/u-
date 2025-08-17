@@ -106,7 +106,7 @@
 </p>
 
 **係数（CSV）** 
-- [coef_save_rate_glm.csv](./data/coef_save_rate_glm.csv)
+- [coef_save_rate_glm.csv](coef_save_rate_glm.csv)
 
 **GLM 詳細（例）**
 - モデル：GLM Binomial（endog=保存率、`var_weights=impressions`）  
